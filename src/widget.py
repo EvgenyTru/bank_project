@@ -9,7 +9,6 @@ def mask_account_card(bank_info: str) -> str:
         return str(f'{bank_info[:-16]}{get_mask_card_number(bank_info[-16:])}')
 
 
-print(mask_account_card('Maestro 1596837868705199'))
-# def get_date(date: str) -> str | None:
-#     """Форматирование даты в нужный вид"""
-#     return f"{date[8:10]}.{date[5:7]}.{date[:4]}"
+def get_date(date: str) -> str | None:
+    """Форматирование даты в нужный вид"""
+    return f"{date[8:10]}.{date[5:7]}.{date[:4]}"
