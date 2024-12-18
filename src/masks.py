@@ -1,5 +1,8 @@
-def get_mask_card_number(card_number: str) -> str:
+from typing import Any
+
+def get_mask_card_number(card_number: Any) -> str:
     """Заменяет звездочками часть номера карты"""
+    card_number = str(card_number)
     if len(card_number) == 16:
         for i in card_number:
             if i.isdigit():

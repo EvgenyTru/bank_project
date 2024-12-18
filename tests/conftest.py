@@ -1,9 +1,26 @@
 import pytest
 
+@pytest.fixture
+def numbers_16_int():
+    return 7000792289606361
+
 
 @pytest.fixture
 def card_numbers_16():
     return "7000792289606361"
+
+@pytest.fixture
+def numbers_19():
+    return "7000792289606361123"
+
+@pytest.fixture
+def numbers_13():
+    return "7000792289606"
+
+
+@pytest.fixture()
+def card_numbers_15():
+    return "700079228906361"
 
 
 @pytest.fixture
