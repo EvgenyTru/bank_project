@@ -13,7 +13,7 @@ def card_numbers_16_space():
 
 @pytest.fixture
 def card_numbers_alpha():
-    return "anmdodfkgkgk"
+    return "anmdodfkgkgkasdf"
 
 
 @pytest.fixture
@@ -27,5 +27,5 @@ def count_numbers_20_spaсes():
 
 @pytest.fixture
 def count_numbers_alpha():
-    return "anmdodfkgkgk"
+    return "sdfghtjranmdodfkgkgk"
 
