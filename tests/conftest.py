@@ -1,26 +1,24 @@
 import pytest
 
-@pytest.fixture
-def numbers_16_int():
+
+@pytest.fixture()
+def card_numbers_19():
+    return '7000792289606361123'
+
+
+@pytest.fixture()
+def card_numbers_16_int():
     return 7000792289606361
+
+
+@pytest.fixture
+def card_numbers_13():
+    return "7000792289606"
 
 
 @pytest.fixture
 def card_numbers_16():
     return "7000792289606361"
-
-@pytest.fixture
-def numbers_19():
-    return "7000792289606361123"
-
-@pytest.fixture
-def numbers_13():
-    return "7000792289606"
-
-
-@pytest.fixture()
-def card_numbers_15():
-    return "700079228906361"
 
 
 @pytest.fixture
@@ -42,6 +40,7 @@ def count_numbers_20():
 def count_numbers_20_spaсes():
     return "70007 92289 60636 11234"
 
+
 @pytest.fixture
 def count_numbers_alpha():
     return "sdfghtjranmdodfkgkgk"
@@ -56,6 +55,7 @@ def list_of_dicts_base():
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
     ]
 
+
 @pytest.fixture
 def list_of_dicts_bad_date():
     return [
@@ -64,4 +64,3 @@ def list_of_dicts_bad_date():
         {"id": 594226727, "state": "CANCELED", "date": "дата"},
         {"id": 615064591, "state": "CANCELED", "date": "2018"},
     ]
-
