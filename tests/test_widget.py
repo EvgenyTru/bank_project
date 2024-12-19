@@ -15,7 +15,7 @@ from src.widget import mask_account_card, get_date
 
     ],
 )
-def test_mask_account_card(value: str, expected: List[Dict[str,Any]] ) -> None:
+def test_mask_account_card(value: str, expected: List[Dict[str, Any]]) -> None:
     assert mask_account_card(value) == expected
 
 
@@ -28,15 +28,15 @@ def test_mask_account_card(value: str, expected: List[Dict[str,Any]] ) -> None:
         ("1", ""),
     ],
 )
-def test_mask_account_card_error(value: str, expected: List[Dict[str,Any]] ) -> None:
+def test_mask_account_card_error(value: str, expected: List[Dict[str, Any]]) -> None:
     with pytest.raises(AssertionError):
-        assert mask_account_card(value) == ('Не достаточно данных')
+        assert mask_account_card(value) == expected
 
 
 @pytest.mark.parametrize(
     "value, expected", [("2024-03-11T02:26:18.671407", "11.03.2024"), ("2024-08-06", "06.08.2024")]
 )
-def test_get_date(value: str, expected: List[Dict[str,Any]] ) -> None:
+def test_get_date(value: str, expected: List[Dict[str, Any]]) -> None:
     assert get_date(value) == expected
 
 
@@ -50,6 +50,6 @@ def test_get_date(value: str, expected: List[Dict[str,Any]] ) -> None:
         ("", "некорректный формат даты"),
     ],
 )
-def test_get_date_error(value: str, expected: List[Dict[str,Any]] ) -> None:
+def test_get_date_error(value: str, expected: List[Dict[str, Any]]) -> None:
     with pytest.raises(AssertionError):
         assert get_date(value) == expected

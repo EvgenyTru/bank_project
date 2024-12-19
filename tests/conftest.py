@@ -64,4 +64,3 @@ def list_of_dicts_bad_date():
         {"id": 594226727, "state": "CANCELED", "date": "дата"},
         {"id": 615064591, "state": "CANCELED", "date": "2018"},
     ]
-
