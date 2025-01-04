@@ -41,15 +41,10 @@ def test_transaction_descriptions():
         next(generator)
 
 
-def test_card_number_generator_min():
-    generator = card_number_generator(1, 3)
-    assert next(generator) == "0000 0000 0000 0001"
-    assert next(generator) == "0000 0000 0000 0002"
-    assert next(generator) == "0000 0000 0000 0003"
-
-
-def test_card_number_generator_max():
-    generator = card_number_generator(9999999999999997, 9999999999999999)
-    assert next(generator) == "9999 9999 9999 9997"
-    assert next(generator) == "9999 9999 9999 9998"
-    assert next(generator) == "9999 9999 9999 9999"
+@pytest.mark.parametrize("x, y, expected", [(1, 5, ["0000 0000 0000 0001", "0000 0000 0000 0002",
+                                                    "0000 0000 0000 0003", "0000 0000 0000 0004",
+                                                    "0000 0000 0000 0005"])])
+def test_card_number_generator(x, y, expected) -> None:
+    """Тест генератора номеров карт"""
+    list_card_number_generator = list(card_number_generator(start=x, finish=y))
+    assert list_card_number_generator == expected
