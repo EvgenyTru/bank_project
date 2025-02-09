@@ -20,7 +20,7 @@ def log(filename: str = "DEFAULT"):
             else:
                 if os.path.isdir(f"{os.getcwd()}\\logs") is False:
                     os.mkdir(f"{os.getcwd()}\\logs")
-                with open(f"{os.getcwd()}\\logs\\{filename}", "a") as file:
+                with open(f"{os.getcwd()}\\logs\\{filename}", "a", encoding="utf8") as file:
                     file.write(f"{logging} \n")
             return result
 
