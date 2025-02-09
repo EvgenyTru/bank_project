@@ -10,3 +10,4 @@ error_function_with_file error: Something went wrong!. Inputs: ('a', 'b'), {}
 error_function_with_file error: Something went wrong!. Inputs: (), {'argument': '1'} 
 error_function_with_file error: Something went wrong!. Inputs: ('a', 'b'), {'argument': '1'} 
 working_function_with_file ok 
+working_function_with_file ok 
